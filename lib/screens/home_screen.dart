@@ -1,3 +1,4 @@
+import 'package:alquran/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: background,
-      appBar: _appBar(),
+      appBar: _appBar(context),
       bottomNavigationBar: _bottomNavigationBar(),
       body: DefaultTabController(
         length: 4,
@@ -164,17 +165,19 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  AppBar _appBar() => AppBar(
+  AppBar _appBar(BuildContext context) => AppBar(
         backgroundColor: background,
         automaticallyImplyLeading: false,
         elevation: 0,
         title: Row(children: [
           IconButton(
-              onPressed: (() => {}),
-              icon: SvgPicture.asset('assets/svgs/menu-icon.svg')),
-          const SizedBox(
-            width: 24,
-          ),
+              onPressed: (() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
+              }),
+              icon: const Icon(Icons.login, color: Colors.white)),
           Text(
             'Quran Connect',
             style: GoogleFonts.poppins(
