@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
           height: 4,
         ),
         Text(
-          'Arif Iskandar',
+          'Name',
           style: GoogleFonts.poppins(
               fontSize: 24, fontWeight: FontWeight.w600, color: Colors.white),
         ),
@@ -111,9 +111,9 @@ class HomeScreen extends StatelessWidget {
                     1
                   ],
                   colors: [
-                    Color(0xFFDF98FA),
-                    Color(0xFFB070FD),
-                    Color(0xFF9055FF)
+                    Color.fromARGB(255, 152, 181, 250),
+                    Color.fromARGB(255, 112, 220, 253),
+                    Color.fromARGB(255, 85, 144, 255)
                   ])),
         ),
         Positioned(
@@ -176,9 +176,9 @@ class HomeScreen extends StatelessWidget {
             width: 24,
           ),
           Text(
-            'Quran App',
-            style:
-                GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.bold),
+            'Quran Connect',
+            style: GoogleFonts.poppins(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           const Spacer(),
           IconButton(

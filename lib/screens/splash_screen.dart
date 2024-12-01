@@ -20,7 +20,7 @@ class SplashScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Quran App',
+                    'Quran Connect',
                     style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -30,7 +30,7 @@ class SplashScreen extends StatelessWidget {
                     height: 16,
                   ),
                   Text(
-                    'Learn Quran and\nRecite once everyday',
+                    'Pelajari Al-Qur\'an dan\nBacalah setiap hari',
                     style: GoogleFonts.poppins(fontSize: 18, color: text),
                     textAlign: TextAlign.center,
                   ),

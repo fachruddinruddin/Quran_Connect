@@ -15,32 +15,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
     return MaterialApp(
-      title: 'Quran App',
+      title: 'Flutter Demo',
       theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: primary,
-        scaffoldBackgroundColor: background,
-        textTheme: TextTheme(
-          bodyLarge: GoogleFonts.poppins(color: Colors.white),
-          bodyMedium: GoogleFonts.poppins(color: Colors.white),
-        ),
+        primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: FutureBuilder(
-        future: AuthService.isLoggedIn(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const SplashScreen();
-          } else {
-            return snapshot.data == true ? const HomeScreen() : const LoginScreen();
-          }
-        },
-      ),
+      home: const SplashScreen(),
     );
   }
 }

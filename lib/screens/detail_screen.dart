@@ -137,9 +137,9 @@ class DetailScreen extends StatelessWidget {
                       1
                     ],
                     colors: [
-                      Color(0xFFDF98FA),
-                      Color(0xFFB070FD),
-                      Color(0xFF9055FF)
+                      Color.fromARGB(255, 152, 181, 250),
+                      Color.fromARGB(255, 112, 220, 253),
+                      Color.fromARGB(255, 85, 144, 255)
                     ])),
           ),
           Positioned(
@@ -234,8 +234,8 @@ class DetailScreen extends StatelessWidget {
           ),
           Text(
             surah.namaLatin,
-            style:
-                GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.bold),
+            style: GoogleFonts.poppins(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           const Spacer(),
           IconButton(
